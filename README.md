@@ -41,18 +41,27 @@ The dataset includes **four primary attributes**:
 
 <img width="1088" height="318" alt="Image" src="https://github.com/user-attachments/assets/48fc60c8-bcfd-4988-8ea3-bb565d639949" />
 
-Since the dataset was collected from a public platform, it contained inconsistencies such as varying date formats, duplicate entries, and textual noise. Therefore, a comprehensive data preprocessing process was required before analysis.
+Since the dataset was collected from a public platform, it contained **inconsistencies** such as varying date formats, duplicate entries, and textual noise. Therefore, a comprehensive data **preprocessing process** was required before analysis.
+
 # Data Pre-Processing
-Data preprocessing was conducted using Python to ensure the dataset was clean, consistent, and suitable for text analysis.
+Data preprocessing was conducted using **Python** to ensure the dataset was clean, consistent, and suitable for text analysis.
+
 ## Removing Missing Values
-Rows containing missing values were identified and removed using the dropna() function, ensuring that only complete reviews were retained for analysis.
+Rows containing missing values were identified and **removed using the dropna() function**, ensuring that only complete reviews were retained for analysis.
+
 ## Standardizing Date Format
 The date column contained mixed formats such as:
 •	Exact dates
-•	Relative expressions (e.g., “a day ago”, “2 days ago”, “hours ago”)
+•	Relative expressions (e.g., “**a day ago**”, “**2 days ago**”, “**hours ago**”)
+
+An example of inconsistent date format in the dataset looked like:
+
+<img width="1340" height="355" alt="Image" src="https://github.com/user-attachments/assets/54ccb589-8bce-4b0b-99f5-470af336ef2c" />
  
-These values were converted into a standardized DD/MM/YYYY format using Python loops and conditional logic as follows:
-  
+These values were **converted into a standardized DD/MM/YYYY format** using Python loops and conditional logic as follows:
+
+<img width="1340" height="356" alt="Image" src="https://github.com/user-attachments/assets/bdb60f8c-a87d-42f6-a8cc-dc135f17f71b" />
+
 ## Text Cleaning
 To ensure consistency in textual analysis, the following steps were applied:
 •	Converted all text to lowercase
