@@ -1,3 +1,5 @@
+# Sentiment Analysis and Topic Modeling on Costco's Customer Review using Python, Orange, and Power BI
+
 # Executive Summary
 Customer feedback is one of the most valuable sources of insight for improving business operations and customer satisfaction. This project analyzes customer reviews of Costco collected from TrustPilot using Sentiment Analysis and Topic Modelling techniques to identify customer sentiment trends and key recurring issues.
 
