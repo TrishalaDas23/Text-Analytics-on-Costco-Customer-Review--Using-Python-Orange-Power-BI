@@ -51,7 +51,9 @@ Rows containing missing values were identified and **removed using the dropna() 
 
 ## Standardizing Date Format
 The date column contained mixed formats such as:
+
 •	Exact dates
+
 •	Relative expressions (e.g., “**a day ago**”, “**2 days ago**”, “**hours ago**”)
 
 An example of inconsistent date format in the dataset looked like:
@@ -64,98 +66,157 @@ These values were **converted into a standardized DD/MM/YYYY format** using Pyth
 
 ## Text Cleaning
 To ensure consistency in textual analysis, the following steps were applied:
-•	Converted all text to lowercase
-•	Removed special characters, emojis, and symbols
+
+•	Converted all text to **lowercase**
+
+•	Removed **special characters**, **emojis**, and **symbols**
+
 •	Retained only meaningful words for analysis
-A custom text-cleaning function was used to process both the Review Title and Review columns.
+
+A **custom text-cleaning function** was used to process both the Review Title and Review columns.
+
 ## Removing Duplicate Reviews
-Duplicate reviews were identified based on the Review Title and Review content and removed using the drop_duplicates() function, ensuring each review appeared only once.
+Duplicate reviews were identified based on the Review Title and Review content and **removed using the drop_duplicates() function**, ensuring each review appeared only once.
+
 ## Stop Word Removal
-Common words such as “the”, “is”, and “and” do not contribute meaningful insights in text analysis. These were removed using the NLTK stop word dictionary, reducing noise in the dataset.
+Common words such as “**the**”, “**is**”, and “**and**” do not contribute meaningful insights in text analysis. These were removed using the **NLTK stop word dictionary**, reducing noise in the dataset.
 
 ## Lemmatization
-Lemmatization was applied using NLTK’s WordNetLemmatizer to reduce words to their base form.
+Lemmatization was applied using **NLTK’s WordNetLemmatizer** to reduce words to their base form.
+
 For example:
-•	running → run
-•	ran → run
-•	runner → run
+
+•	**running → run**
+
+•	**ran → run**
+
+•	**runner → run**
+
 This improves the accuracy of text analysis by treating different word forms as a single term.
+
 # Sentiment Analysis and Topic Modelling
 The flow diagram for sentiment analysis and topic modelling techniques was done in Orange tool as follows:
+
+<img width="1564" height="1062" alt="Image" src="https://github.com/user-attachments/assets/ebbce5e1-28c8-4bf2-b197-c5f1951d20fb" />
  
 # Sentiment Analysis
-To understand customer satisfaction levels, Sentiment Analysis was performed using the VADER algorithm in the Orange tool.
-VADER assigns four sentiment scores:
-•	Positive
-•	Negative
-•	Neutral
-•	Compound score
-The compound score ranges from -1 to +1 and represents the overall sentiment of each review.
-  
+To understand customer satisfaction levels, **Sentiment Analysis** was performed using the **VADER algorithm** in the **Orange tool**.
 
+VADER assigns **four sentiment scores**:
+
+•	**Positive**
+•	**Negative**
+•	**Neutral**
+•	**Compound score**
+
+The compound score **ranges from -1 to +1** and represents the **overall sentiment of each review**.
+
+<img width="1023" height="528" alt="Image" src="https://github.com/user-attachments/assets/dd825268-b964-4b81-ab2e-f599a34f6759" />
+  
 # # Yearly Sentiment Trends
-The average compound sentiment score was calculated for each year between 2011 and 2024.
+The average compound sentiment score was calculated for each year between **2011 and 2024** as follows:
+
+<img width="498" height="462" alt="Image" src="https://github.com/user-attachments/assets/e6604a09-24c9-4cdb-a519-c9b17f7618bc" />
  
 Key observations include:
-•	2011–2013: Strong positive sentiment (above 0.70)
-•	2014–2016: Significant decline in sentiment
-•	2017–2020: Sentiment remained moderately negative
-•	2021: Lowest sentiment score (-0.28)
-•	2023–2024: Slight improvement but still slightly negative
-To illustrate the trends over time, the average yearly compound sentiment scores were plotted using a line chart in Power BI as follows:
- 
-Insight: These trends suggest that customer satisfaction has declined over time and may reflect operational challenges or changes in customer expectations.
+
+•	**2011–2013**: Strong **positive** sentiment (**above 0.70**)
+
+•	**2014–2016**: Significant **decline in sentiment**
+
+•	**2017–2020**: Sentiment remained **moderately negative**
+
+•	**2021**: **Lowest sentiment** score (**-0.28**)
+
+•	**2023–2024**: **Slight improvement** but still **slightly negative**
+
+To illustrate the **trends over time**, the average yearly compound sentiment scores were plotted using a **line chart** in **Power BI** as follows:
+
+<img width="833" height="610" alt="Image" src="https://github.com/user-attachments/assets/fd0c3e4f-679c-49bc-8e48-245514582875" />
+
+**Insight**: These trends suggest that **customer satisfaction has declined over time** and may reflect operational challenges or changes in customer expectations.
 
 # Topic Modelling
-To identify recurring issues within customer feedback, Latent Dirichlet Allocation (LDA) topic modelling was applied using the Orange tool.
-The analysis generated 10 major topics, each representing common themes in customer reviews.
+To identify recurring issues within customer feedback, **Latent Dirichlet Allocation (LDA) topic modelling** was applied using the **Orange tool**.
+
+The analysis generated **10 major topics**, each representing **common themes in customer reviews**.
+
+<img width="1029" height="764" alt="Image" src="https://github.com/user-attachments/assets/bb32a0f1-7156-451d-9878-6a9e981349c9" />
  
 ## Key Topics Identified
-1. Customer Service Issues
-Reviews frequently mention concerns regarding employee responsiveness, management behavior, and service quality.
-2. Delivery Delays
-Customers expressed frustration regarding long waiting times and delayed deliveries.
-3. Product Returns and Defects
-Many reviews highlighted difficulties in returning defective products or resolving purchase-related issues.
-4. Membership Dissatisfaction
-Some customers questioned the value of Costco’s membership and reported negative in-store experiences.
-5. Delivery Scheduling
-Customers reported inefficiencies in delivery timing and scheduling policies.
-6. Product Quality Feedback
-While many customers praised product quality and pricing, others reported inconsistent product experiences.
-7. Pricing and Refund Concerns
-Customers mentioned dissatisfaction regarding pricing transparency and refund procedures.
-8. Employee Interaction
-Several reviews referenced negative interactions with staff during refund or membership processes.
-9. Online Ordering Issues
-Customers reported technical issues and delays related to online orders.
-10. Communication and Shipping Updates
-Reviews highlighted a lack of timely communication regarding shipping status and order updates.
+**1. Customer Service Issues**
+Reviews frequently mention concerns regarding **employee responsiveness**, **management behavior**, and **service quality**.
+
+**2. Delivery Delays**
+Customers expressed frustration regarding **long waiting times** and **delayed deliveries**.
+
+**3. Product Returns and Defects**
+Many reviews highlighted **difficulties in returning defective products** or resolving purchase-related issues.
+
+**4. Membership Dissatisfaction**
+Some customers questioned the value of **Costco’s membership** and reported **negative in-store experiences**.
+
+**5. Delivery Scheduling**
+Customers reported **inefficiencies in delivery timing** and scheduling policies.
+
+**6. Product Quality Feedback**
+While many customers praised product quality and pricing, others reported **inconsistent product experiences**.
+
+**7. Pricing and Refund Concerns**
+Customers mentioned **dissatisfaction** regarding **pricing transparency** and **refund procedures**.
+
+**8. Employee Interaction**
+Several reviews referenced **negative interactions with staff** during refund or membership processes.
+
+**9. Online Ordering Issues**
+Customers reported **technical issues** and delays related to **online orders**.
+
+**10. Communication and Shipping Updates**
+Reviews highlighted a **lack of timely communication** regarding shipping status and order updates.
+
 The LDA model achieved:
-•	Log Perplexity: 54.99
-•	Topic Coherence: 0.57
+
+•	**Log Perplexity: 54.99**
+
+•	**Topic Coherence: 0.57**
+
 These values indicate moderate interpretability and reliable topic grouping.
+
 # Key Insights of the Analysis
 The analysis highlights several important insights for Costco management:
-•	Customer sentiment has declined significantly since 2013.
-•	Operational issues such as delivery delays and communication gaps are major sources of dissatisfaction.
-•	Customer service quality is frequently mentioned in negative reviews.
-•	Customers value Costco’s product quality and pricing, but operational issues reduce overall satisfaction.
-•	Online shopping experience and refund processes require improvement.
+
+•	Customer sentiment has **declined significantly since 2013**.
+
+•	Operational issues such as **delivery delays** and **communication gaps** are **major sources of dissatisfaction**.
+
+•	**Customer service quality** is frequently mentioned in **negative reviews**.
+
+•	Customers value Costco’s product quality and pricing, but **operational issues reduce overall satisfaction**.
+
+•	**Online shopping experience** and **refund processes** require improvement.
+
 # Strategic Recommendations
-Based on the analysis, the following strategic actions are recommended.
-1.	Improve Delivery Operations
+Based on the analysis, the following strategic actions are recommended:
+
+**1.	Improve Delivery Operations**
 Enhance logistics planning and provide real-time updates to customers to reduce delivery delays.
-2.	Strengthen Customer Service Training
+
+**2.	Strengthen Customer Service Training**
 Invest in employee training programs focused on customer interaction and problem resolution.
-3.	Enhance Online Shopping Platform
+
+**3.	Enhance Online Shopping Platform**
 Improve the stability and efficiency of the online ordering system to minimize technical issues.
-4.	Simplify Return and Refund Processes
+
+**4.	Simplify Return and Refund Processes**
 Streamline refund procedures to ensure faster and more transparent customer service.
-5.	Improve Customer Communication
+
+**5.	Improve Customer Communication**
 Provide proactive communication regarding shipping updates, order status, and service inquiries.
+
 # Conclusion
-This analysis demonstrates the value of using data analytics and natural language processing techniques to understand customer feedback at scale.
-Although Costco maintains strengths in product quality and pricing, the analysis shows that operational inefficiencies and service-related issues have impacted customer satisfaction in recent years.
+This analysis demonstrates the value of using **data analytics** and **natural language processing techniques** to **understand customer feedback** at scale.
+
+Although Costco **maintains strengths in product quality and pricing**, the analysis shows that **operational inefficiencies** and **service-related issues** have **impacted customer satisfaction** in recent years.
+
 By addressing these concerns through targeted operational improvements and enhanced customer engagement strategies, Costco can strengthen its brand reputation, improve customer loyalty, and sustain long-term business growth.
 
