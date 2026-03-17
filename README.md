@@ -105,8 +105,11 @@ To understand customer satisfaction levels, **Sentiment Analysis** was performed
 VADER assigns **four sentiment scores**:
 
 •	**Positive**
+
 •	**Negative**
+
 •	**Neutral**
+
 •	**Compound score**
 
 The compound score **ranges from -1 to +1** and represents the **overall sentiment of each review**.
