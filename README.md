@@ -1,7 +1,7 @@
 # Sentiment Analysis and Topic Modeling on Costco's Customer Review using Python, Orange, and Power BI
 
 # Executive Summary
-Customer feedback is one of the most valuable sources of insight for improving business operations and customer satisfaction. This project analyzes customer reviews of Costco collected from TrustPilot using Sentiment Analysis and Topic Modelling techniques to identify customer sentiment trends and key recurring issues.
+Customer feedback is one of the most valuable sources of insight for improving business operations and customer satisfaction. This project analyzes **customer reviews of Costco** collected from **TrustPilot** using **Sentiment Analysis** and **Topic Modelling** techniques to **identify customer sentiment trends** and **key recurring issues**.
 
 # Software/Tools
 •	**Python**
@@ -11,28 +11,36 @@ Customer feedback is one of the most valuable sources of insight for improving b
 •	**Power BI**
 
 # Techniques
-•	Web scrapping using Python Selenium library. Natural Language Processing (NLP) methods were then applied to clean and prepare the textual data for analysis. 
-•	Sentiment Analysis using the VADER algorithm in the Orange tool 
-•	Topic Modelling (LDA) to identify recurring themes and concerns within customer reviews.
+•	**Web scrapping** using **Python Selenium library**. **Natural Language Processing (NLP) methods** were then applied to clean and prepare the textual data for analysis. 
+
+•	**Sentiment Analysis** using the **VADER algorithm** in the **Orange tool** 
+
+•	**Topic Modelling (LDA)** to identify recurring themes and concerns within customer reviews.
+
 # Data Collection
-2.1 Data Source
 Customer reviews were collected from TrustPilot, a widely used online review platform where customers share their experiences with companies.
-The reviews were collected using Python with the Selenium library, which automated the process of navigating through multiple review pages and extracting the relevant information.
-Each review page contained approximately 20 customer reviews, and the scraping process captured the following attributes:
-•	Review Rating
-•	Review Date
-•	Review Title
-•	Review Content
-Company replies to customer reviews were intentionally excluded to focus solely on customer feedback.
+
+The reviews were collected using **Python with the Selenium library**, which automated the process of navigating through multiple review pages and extracting the relevant information.
+
+**Each review page** contained approximately **20 customer reviews**, and the scraping process captured the following attributes:
+
+•	**Review Rating**
+
+•	**Review Date**
+
+•	**Review Title**
+
+•	**Review Content**
+
+Company replies to customer reviews were intentionally excluded to focus solely on **customer feedback**.
 
 # Dataset Overview
-The final raw dataset contains 2276 customer reviews spanning from 2011 to 2024.
-The dataset includes four primary attributes:
-Attribute	Description
-Rating	Numerical score from 1 (Poor) to 5 (Excellent)
-Date	Date when the review was posted
-Review Title	Short summary of the customer’s feedback
-Review	Detailed description of the customer’s experience
+The final raw dataset **after webscraping** and **before pre-processing** contains **2276 customer reviews** spanning from **2011 to 2024**.
+
+The dataset includes **four primary attributes**:
+
+<img width="1088" height="318" alt="Image" src="https://github.com/user-attachments/assets/48fc60c8-bcfd-4988-8ea3-bb565d639949" />
+
 Since the dataset was collected from a public platform, it contained inconsistencies such as varying date formats, duplicate entries, and textual noise. Therefore, a comprehensive data preprocessing process was required before analysis.
 # Data Pre-Processing
 Data preprocessing was conducted using Python to ensure the dataset was clean, consistent, and suitable for text analysis.
